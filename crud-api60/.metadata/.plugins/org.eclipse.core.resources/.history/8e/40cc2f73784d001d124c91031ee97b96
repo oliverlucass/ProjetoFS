@@ -1,0 +1,30 @@
+package com.chat;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import com.chat.model.Usuario;
+import com.chat.repository.UsuarioRepository;
+
+@SpringBootApplication
+public class ChatApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ChatApplication.class, args);
+	}
+	
+	@Bean
+	CommandLineRunner initDataBase(UsuarioRepository usuarioRepository) {
+		return args -> {
+			usuarioRepository.deleteAll();
+			
+			Usuario u = new Usuario();
+			
+			
+			usuarioRepository.save(null);
+		};
+	}
+
+}

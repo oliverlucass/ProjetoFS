@@ -1,0 +1,8 @@
+package com.chat.model;
+
+
+@Getter
+public class Usuario {
+	private Long id;
+	private String username;
+}

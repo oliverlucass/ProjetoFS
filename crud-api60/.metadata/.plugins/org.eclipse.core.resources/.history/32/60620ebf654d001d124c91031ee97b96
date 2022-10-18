@@ -1,0 +1,5 @@
+package com.chat.usuario.controller;
+
+public class UsuarioController {
+
+}
